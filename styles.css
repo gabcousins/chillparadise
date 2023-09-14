@@ -1,0 +1,491 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.background{
+  background-image: url('https://media.discordapp.net/attachments/959122471783653397/1151182462483968051/image.png?width=875&height=468');
+  background-size: cover;
+  position: relative;
+}
+.hero-know{
+  padding-top: 60px;
+}
+.hero-know button{
+  color: white;
+  border-color: transparent;
+}
+#btns{
+  background-color: transparent;
+  border-color: #fa3636;
+}
+#btns:hover{
+  background-color: #d62828;
+}
+nav {
+  height: 80px;
+  width: 100%;
+  
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+nav label.logo {
+  font-size: 30px;
+  color: white;
+  line-height: 80px;
+  padding-left: 20px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 10px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.active, .ah a:hover {
+  color: #fa3636;
+  transition: .5s;
+}
+
+.ahs {
+  text-decoration: none;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  nav label.logo {
+    font-size: 20px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: absolute;
+    width: 94.9%;
+    height: 85vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  .active, .ah a:hover {
+    color: #fa3636;
+    transition: .5s;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* Font Awesome icons */
+.fa-house {
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-address-card {
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-user-group {
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-id-badge {
+  padding-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.fa-bars {
+  position: relative;
+}
+
+/* Hero section styles */
+.hero {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: black;
+  padding: 150px 0;
+}
+
+/* Add an overlay to improve text readability */
+.hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #fa3636;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d62828;
+}
+
+
+/* About section styles */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 50px 100px; /* Adjust padding as needed */
+}
+
+.about h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.about p {
+  color: white;
+  font-size: 25px;
+}
+
+.animated img {
+  border-radius: 2%;
+  width: 80%;
+  max-width: 500px; /* Adjust max-width as needed */
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 50px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .animated {
+    margin-top: 20px; /* Add some spacing between the text and image */
+    text-align: center;
+  }
+
+  .animated img {
+    width: 100%;
+    max-width: 300px; /* Adjust max-width for smaller screens */
+    height: auto;
+  }
+}
+/* Events section styles */
+.events {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.events h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #d62828;
+  
+}
+
+.event {
+  margin-bottom: 30px;
+  color: #c4c4c4;
+}
+.event h3{
+  font-size: 25px;
+}
+
+/* Members section styles */
+.members {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.members h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.member img,
+.Members img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border: 4px solid #fa3636;
+  transition: transform 0.3s;
+}
+
+.member img:hover,
+.Members img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact section styles */
+.contact {
+  
+  color: black;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+  
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+.gradient{
+  background-image: linear-gradient(314deg, #63a91f 0%, #1a512e 74%);
+}
+#preloader{
+  background: #000 url(images/200w.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+
+
+#para2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+}
+#profile{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  color: white;
+  text-decoration: underline;
+}
+#custom{
+  font-family: 'Montserrat', sans-serif;
+  color: #fa3636;
+  font-size: 3rem;
+  font-weight: normal;
+
+}
+.middle{
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+#img{
+  width: 26%;
+  float: left;
+  margin-right: 30px;
+}
+#para3{
+font-size: 1.3rem;
+font-family: 'Montserrat', sans-serif;
+color: white;
+}
+#trading{
+  font-family: 'Montserrat', sans-serif;
+  color: #fa3636;
+  font-size: 3rem;
+  font-weight: normal;
+}
+#img2{
+  width: 26%;
+  float: left;
+  margin-right: 30px;
+}
+#para4{
+  font-size: 1.3rem;
+font-family: 'Montserrat', sans-serif;
+color: white;
+}
+#img3{
+  width: 41%;
+  float: right;
+  margin-left: 30px;
+}
+#selling{
+  font-family: 'Montserrat', sans-serif;
+  color: #fa3636;
+  font-size: 3rem;
+  font-weight: normal;
+}
+#para5{
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+#creator{
+  font-family: 'Montserrat', sans-serif;
+  color: #fa3636;
+  font-size: 3rem;
+  font-weight: normal;
+}
+#img4{
+  width: 41%;
+  float: right;
+  margin-left: 30px;
+}
+#para6{
+  font-size: 1.3rem;
+  font-family: 'Montserrat', sans-serif; 
+  color: white;
+}
+
+
+
+
+@media (max-width: 952px) {
+  #para6{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+  }
+  #para5{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+  }
+  #para4{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+  }
+  #para3{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+  }
+  #creator{
+    font-family: 'Montserrat', sans-serif;
+    color: #fa3636;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  #selling{
+    font-family: 'Montserrat', sans-serif;
+    color: #fa3636;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  #trading{
+    font-family: 'Montserrat', sans-serif;
+    color: #fa3636;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  #custom{
+    font-family: 'Montserrat', sans-serif;
+    color: #fa3636;
+    font-size: 2rem;
+    font-weight: normal;
+  
+  }
+  #img{
+    width: 45%;
+    float: left;
+    margin-right: 30px;
+  }
+  #img2{
+    width: 50%;
+    float: left;
+    margin-right: 30px;
+  }
+  #img3{
+    width: 70%;
+    float: right;
+    margin-left: 30px;
+  }
+  #img4{
+    width: 70%;
+    float: right;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 858px) {
+
+}
+/* Media queries for responsive design */
